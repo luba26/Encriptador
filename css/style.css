@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    overflow: hidden; /* Evita barras de desplazamiento innecesarias */
+    background: linear-gradient(to top, #4b2c77, #8e2b8b); /* Gradiente de violeta oscuro a un violeta más claro */
+    background-size: cover; /* Asegura que el gradiente cubra todo el fondo */
+    background-position: center; /* Centra el gradiente */
+    font-family: "Roboto", sans-serif; /* Asegúrate de que Roboto se aplique a todo el body */
+    margin: 0; /* Asegura que no haya márgenes predeterminados */
+    padding: 0; /* Asegura que no haya rellenos predeterminados */
+}
+
+
+h1 {
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.descripcion,
+label {
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra horizontalmente los elementos en la columna */
+}
+
+.descripcion {
+    text-align: center;
+}
+
+/* Nueva clase para la disposición en fila de los cuadros de texto */
+.text-box-container {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    width: 80%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor si es necesario */
+    gap: 5px; /* Reduce el espacio entre los cuadros de texto */
+}
+
+.text-box1 {
+    width: 100%;
+    float: right; 
+    display: grid;
+    place-items: center;
+}
+
+.text-box2 {
+    width: 100%;
+    float: left;
+    display: grid;
+    place-items: center;
+}
+
+.divider-image {
+    width: 10%; /* Ajusta el ancho de la imagen para que se asemeje al tamaño de los cuadros de texto */
+    max-width: 150px; /* Limita el ancho máximo de la imagen para mantener la proporción */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 10px; /* Espacio horizontal alrededor de la imagen */
+}
+
+.textarea-wrapper {
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor del textarea */
+    border: 5px solid #333;
+}
+
+/* Estilo para los textareas */
+.form-control {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: auto; /* Asegura que se pueda desplazar si el texto es largo */
+}
+
+/* Estilo para el mensaje sobrepuesto */
+.overlay-message {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Ajusta la posición horizontal del mensaje */
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none; /* Asegura que el mensaje no interfiera con la interacción del textarea */
+    transition: opacity 0.3s ease; /* Suaviza la transición al mostrar/ocultar el mensaje */
+    z-index: 1; /* Asegura que el mensaje esté encima del textarea */
+    opacity: 1; /* Muestra el mensaje inicialmente */
+}
+
+/* Estilos para los botones */
+#boton-encriptar,
+#boton-desencriptar,
+#boton-copiar {
+    width: 181px;
+    height: 37px;
+    background: #21235b;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Ajusta el margen superior para los botones */
+}
+
+#boton-encriptar:hover,
+#boton-desencriptar:hover,
+#boton-copiar:hover {
+    background: #1b1e3b; /* Cambia el color de fondo cuando el botón es hover */
+}
+
+
+
+
+
+/* CSS para movil */
+
+@media screen and (max-width: 480px) {
+    .text-box1, .text-box2{
+        width: 100%;
+    }
+
+    .text-box1 > label, .text-box2 > label{
+        margin: 1em;
+    }
+
+    #boton-desencriptar, #boton-copiar{
+        margin-bottom: 1em;
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .text-box1, .text-box2{
+        width: 100%;
+    }
+
+    .text-box1 > label, .text-box2 > label{
+        margin: 1em;
+    }
+
+    #boton-desencriptar, #boton-copiar{
+        margin-bottom: 1em;
+    }
+}
+
